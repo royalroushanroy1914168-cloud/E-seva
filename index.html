@@ -1,1 +1,401 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Seva Portal | Roushan Kumar Roy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <style>
+        
+.ai-voice-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 22px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #0866ee, #12b8cf);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 5px 25px rgba(0, 80, 200, .35);
+    transition: .3s;
+}
+
+.ai-voice-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 80, 200, .5);
+}
+
+.ai-icon {
+    font-size: 23px;
+}
+
+@media(max-width: 500px) {
+    .ai-voice-button {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 17px;
+    }
+}
+
+     </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-landmark"></i>
+        <div>
+            <h2>e-Seva Portal</h2>
+            <p>All Services at One Place</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">All Services</a>
+        <a href="#popular">Popular</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">INDIA DIGITAL SERVICES</span>
+        <h1>Your Government Services<br>
+            <span>One Click Away!</span>
+        </h1>
+        <p>
+            Aadhaar, PAN, Voter ID, Passport, Banking,
+            Scholarship, Land Records and more.
+        </p>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput"
+                   placeholder="Search Aadhaar, PAN, Passport...">
+            <button onclick="searchServices()">Search</button>
+        </div>
+    </div>
+</section>
+<main class="ai">
+    
+<!-- e-Seva AI Floating Voice Button -->
+<a href="/voice" class="ai-voice-button">
+    <span class="ai-icon">🎙️</span>
+    <span>Talk with e-Seva AI</span>
+</a>
+
+</main>
+
+<main class="container">
+
+    <div class="section-heading" id="services">
+        <div>
+            <h2>Explore Government Services</h2>
+            <p>Find important Indian government portals</p>
+        </div>
+    </div>
+
+    <div class="services-grid" id="serviceGrid">
+
+        <a class="service-card" href="https://tathya.uidai.gov.in/access/login?role=resident" target="_blank" rel="noopener">
+            <div class="service-icon orange">
+                <i class="fa-solid fa-fingerprint"></i>
+            </div>
+            <h3>Aadhaar Card</h3>
+            <p>Download, Update & Verify</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://onlineservices.proteantech.in/paam/endUserRegisterContact.html" target="_blank" rel="noopener">
+            <div class="service-icon blue">
+                <i class="fa-solid fa-id-card"></i>
+            </div>
+            <h3>PAN Card</h3>
+            <p>PAN Services & Tax Portal</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://voters.eci.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon green">
+                <i class="fa-solid fa-person-booth"></i>
+            </div>
+            <h3>Voter ID</h3>
+            <p>Apply, Correction & Status</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://www.passportindia.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon purple">
+                <i class="fa-solid fa-passport"></i>
+            </div>
+            <h3>Passport</h3>
+            <p>Apply, Renew & Track</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://parivahan.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon red">
+                <i class="fa-solid fa-car"></i>
+            </div>
+            <h3>Driving Licence</h3>
+            <p>Licence & Vehicle Services</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://jsfss.jharkhand.gov.in/SeccCardholderAddTemps/register/" target="_blank" rel="noopener">
+            <div class="service-icon orange">
+                <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+            <h3>Ration Card</h3>
+            <p>Food Security & Ration Services</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://jharsewa.jharkhand.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon green">
+                <i class="fa-solid fa-file-circle-check"></i>
+            </div>
+            <h3>Jharkhand Certificates</h3>
+            <p>Caste, Income & Residence</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://jharbhoomi.jharkhand.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon blue">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <h3>Jharkhand Land Records</h3>
+            <p>Khata, Khesra & Land Details</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://pmkisan.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon green">
+                <i class="fa-solid fa-tractor"></i>
+            </div>
+            <h3>PM Kisan</h3>
+            <p>Farmer Registration & Status</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://beneficiary.nha.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon red">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3>Ayushman Bharat</h3>
+            <p>Health Card & Beneficiary Portal</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon purple">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+            </div>
+            <h3>DigiLocker</h3>
+            <p>Digital Documents & Certificates</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://scholarships.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon orange">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Scholarship</h3>
+            <p>National Scholarship Portal</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://www.epfindia.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon blue">
+                <i class="fa-solid fa-building"></i>
+            </div>
+            <h3>EPFO & UAN</h3>
+            <p>PF Balance & Services</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://www.ncs.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon green">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Government Jobs</h3>
+            <p>National Career Service</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a class="service-card" href="https://www.gst.gov.in/" target="_blank" rel="noopener">
+            <div class="service-icon red">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3>GST Portal</h3>
+            <p>GST Registration & Returns</p>
+            <span>Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        
+<!-- GOVERNMENT EXAMINATION SERVICES -->
+
+<a class="service-card" href="https://upsc.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon blue"><i class="fa-solid fa-landmark"></i></div>
+    <h3>UPSC Exams</h3>
+    <p>Civil Services, NDA, CDS, CSE</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://ssc.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon orange"><i class="fa-solid fa-file-pen"></i></div>
+    <h3>SSC Exams</h3>
+    <p>CGL, CHSL, MTS, GD, CPO</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://www.rrbcdg.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon red"><i class="fa-solid fa-train"></i></div>
+    <h3>Railway Exams</h3>
+    <p>RRB NTPC, Group D, ALP, JE</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://www.ibps.in/" target="_blank" rel="noopener">
+    <div class="service-icon green"><i class="fa-solid fa-building-columns"></i></div>
+    <h3>IBPS Banking</h3>
+    <p>IBPS PO, Clerk, RRB, SO</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://sbi.co.in/web/careers" target="_blank" rel="noopener">
+    <div class="service-icon blue"><i class="fa-solid fa-building"></i></div>
+    <h3>SBI Recruitment</h3>
+    <p>SBI PO, Clerk & Other Posts</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://exams.nta.ac.in/" target="_blank" rel="noopener">
+    <div class="service-icon purple"><i class="fa-solid fa-graduation-cap"></i></div>
+    <h3>NTA Exams</h3>
+    <p>JEE, NEET, CUET, UGC NET</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://jpsc.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon orange"><i class="fa-solid fa-scale-balanced"></i></div>
+    <h3>JPSC Exams</h3>
+    <p>Jharkhand Civil Services & Recruitment</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://jssc.jharkhand.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon green"><i class="fa-solid fa-user-tie"></i></div>
+    <h3>JSSC Exams</h3>
+    <p>CGL, Inter Level, Matric Level</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://joinindianarmy.nic.in/" target="_blank" rel="noopener">
+    <div class="service-icon red"><i class="fa-solid fa-shield-halved"></i></div>
+    <h3>Indian Army</h3>
+    <p>Army Recruitment & Updates</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://www.joinindiannavy.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon blue"><i class="fa-solid fa-anchor"></i></div>
+    <h3>Indian Navy</h3>
+    <p>Navy Recruitment & Updates</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://afcat.cdac.in/" target="_blank" rel="noopener">
+    <div class="service-icon purple"><i class="fa-solid fa-plane"></i></div>
+    <h3>Indian Air Force</h3>
+    <p>AFCAT & Air Force Recruitment</p>
+    <span>Official Website ↗</span>
+</a>
+
+<a class="service-card" href="https://www.ncs.gov.in/" target="_blank" rel="noopener">
+    <div class="service-icon green"><i class="fa-solid fa-briefcase"></i></div>
+    <h3>National Career Service</h3>
+    <p>Employment & Job Opportunities</p>
+    <span>Official Website ↗</span>
+</a>
+ 
+<a class="service-card"
+   href="https://pmfby.gov.in/"
+   target="_blank"
+   rel="noopener">
+
+    <div class="service-icon green">
+        <i class="fa-solid fa-wheat-awn"></i>
+    </div>
+
+    <h3>PMFBY – Crop Insurance</h3>
+
+    <p>Farmer Registration, Crop Insurance & Claim Status</p>
+
+    <span>Official Website ↗</span>
+
+</a>
+
+
+    </div>
+
+    <div id="noResults" class="no-results">
+        No services found. Try another search.
+    </div>
+
+    <section class="notice">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>
+            <h3>Important Information</h3>
+            <p>
+                This is an independent information portal.
+                It is not affiliated with the Government of India.
+                Always use official government websites for applications
+                and payments.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer id="about">
+    <h2><i class="fa-solid fa-landmark"></i> e-Seva Portal</h2>
+    <p>A Citizen Service Directory by <strong>Roushan Kumar Roy</strong></p>
+    <p>© 2026 e-Seva Portal. All Rights Reserved.</p>
+</footer>
+
+<script>
+function searchServices() {
+    const input = document.getElementById("searchInput")
+        .value.toLowerCase().trim();
+
+    const cards = document.querySelectorAll(".service-card");
+    let found = 0;
+
+    cards.forEach(card => {
+        const match = card.innerText.toLowerCase().includes(input);
+        card.style.display = match ? "block" : "none";
+        if (match) found++;
+    });
+
+    document.getElementById("noResults").style.display =
+        found === 0 ? "block" : "none";
+}
+
+document.getElementById("searchInput").addEventListener("input", searchServices);
+</script>
+
+</body>
+</html>
+
